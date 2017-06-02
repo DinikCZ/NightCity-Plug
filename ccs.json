@@ -2,7 +2,7 @@
     "room": "【Night City】【CZ/SK/EN】 ツ",
     "author": "DinikCZ",
     "icon": null,
-    "css": "http://www.dinik.cz/Style.css",
+    "css": "http://dinikcz.github.io/NightCity-Plug/Style.css",
     "rules": {
         "allowAutorespond": true,
         "allowAutowoot": true,
