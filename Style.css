@@ -181,9 +181,6 @@ i.icon.icon-chat-subscriber {
 .torch {
 	visibility: hidden;
 }
-#room-bar .icon-room { 
-	background: url(http://i.imgur.com/zVv4Bwm.png);
-}
 .is-staff .name {
 	color: #00FFF7;
     font-weight: normal;
