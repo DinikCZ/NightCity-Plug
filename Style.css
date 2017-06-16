@@ -60,12 +60,6 @@ i.icon.icon-chat-bouncer {
 i.icon.icon-chat-dj {
 	background : url(https://dinikcz.github.io/NightCity-Plug/plug/SM-Resdj.png);
 }
-i.icon.icon-chat-subscriber {
-	background : url(https://dinikcz.github.io/NightCity-Plug/Subscriber1.png);
-}
-#user-rollover .meta.subscriber .status i {
-    background : url(https://dinikcz.github.io/NightCity-Plug/Subscriber1.png);
-}
 #user-rollover .info .level .label {
 	color:#EFEFEF;
 }
