@@ -1,3 +1,6 @@
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom,rgba(0, 0, 0, 0.45) 0,rgba(0, 0, 0, 0.75) 100%) !important;
+}
 .room-background {
     background: url(https://dinikcz.github.io/NightCity-Plug/plug/background.png) no-repeat !important;
     width: 500% !important;
@@ -6,17 +9,11 @@
 #footer {
 	background: linear-gradient(to bottom,rgba(0, 0, 0, 0.45) 0,rgba(0, 0, 0, 0.75) 100%);
 }
-#footer-user .info.showing .meta .bar .progress {
-	background:#2D9400;
-}
 #footer-user .info.showing .meta .level .label {
 	color:#EFEFEF;
 }
 #footer-user .info.showing .meta .level .value {
 	color:#EFEFEF;
-}
-#footer-user .info.is-staff.showing .name {
-	color: #0EB006;
 }
 #footer .shop-button {
 	background: linear-gradient(to bottom,rgba(0, 0, 0, 0.45) 0,rgba(0, 0, 0, 0.75) 100%);
@@ -26,9 +23,11 @@
 }
 #chat {
 	background: linear-gradient(to bottom,rgba(0, 0, 0, 0.20) 10%,rgba(0, 0, 0, 0.65) 100%);
+    transition: all 0.6s;
 }
 #chat .emote, #chat .mention, #chat .message, #chat .moderation, #chat .skip, #chat .system, #chat .update, #chat .welcome, #chat .user-action {
 	background: linear-gradient(to bottom,rgba(0, 0, 0, 0.20) 10%,rgba(0, 0, 0, 0.65) 100%);
+    transition: all 0.6s;
 }
 #room .app-right {
 	background: linear-gradient(to left,rgba(0, 0, 0, 0.20) 10%,rgba(0, 0, 0, 0.65) 100%);
@@ -114,49 +113,55 @@ i.icon.icon-chat-dj {
 	box-shadow: inset 0 0 5px hsla(0,0%,100%,.3);
 }
 #woot {
-	border-radius: 30px 0 0 30px;
-	background: linear-gradient(to bottom,rgba(0, 0, 0, 0.45) 0,rgba(0, 0, 0, 0.75) 100%) !important;
-	box-shadow: inset 0 0 10px hsl(0,0%,40%) !important;
+  border-radius: 5px 0 0 5px;
+    background: linear-gradient(to bottom,rgba(0, 0, 0, 0.45) 0,rgba(0, 0, 0, 0.75) 100%) !important;
+    box-shadow: inset 0 0 10px hsl(0,0%,40%) !important;
 }
-#woot.selected, #woot-rs .title {
-	background: linear-gradient(135deg, hsla(90,80%,50%,.3), hsla(90,80%,30%,.3)) !important;
-	box-shadow: inset 0 0 10px hsl(70,100%,40%) !important;
+
+#meh {
+  border-radius: 0 5px 5px 0;
+        background: linear-gradient(to bottom,rgba(0, 0, 0, 0.45) 0,rgba(0, 0, 0, 0.75) 100%) !important;
+    box-shadow: inset 0 0 10px hsl(0,0%,40%) !important;
 }
 #grab {
-	background: linear-gradient(to bottom,rgba(0, 0, 0, 0.45) 0,rgba(0, 0, 0, 0.75) 100%) !important;
-	box-shadow: inset 0 0 10px hsl(0,0%,40%) !important;
+        background: linear-gradient(to bottom,rgba(0, 0, 0, 0.45) 0,rgba(0, 0, 0, 0.75) 100%) !important;
+    box-shadow: inset 0 0 10px hsl(0,0%,40%) !important;
 }
-#grab.selected, #grab-rs .title {
-	background: linear-gradient(hsla(270,70%,50%,.3), hsla(265,70%,30%,.3)) !important;
-	box-shadow: inset 0 0 10px hsl(280,100%,40%) !important;
+
+#mem .bottom, #meh.crowd-response.disabled.active .bottom {
+  border-radius: 0 0 5px 0 !important;
 }
-#meh i.icon {
-    background-image: url("https://dinikcz.github.io/NightCity-Plug/plug/meh_new.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+
+#woot .bottom, #woot.crowd-response.disabled.active .bottom {
+  border-radius: 0 0 0 5px !important;
 }
-#woot i.icon {
-    background-image: url("https://24.media.tumblr.com/6245d24e67694efad3d6226fd05a7ecf/tumblr_mkyb94qEFr1s5jjtzo1_250.gif");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+
+#vote .crowd-response {
+  background-color: var(--transparent-back);
 }
-#grab i.icon {
-    background-image: url("https://dinikcz.github.io/NightCity-Plug/plug/grab_new.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+
+#vote .crowd-response.disabled .bottom {
+  background: rgba(0,0,0,0);
 }
-#meh {
-	background: linear-gradient(to bottom,rgba(0, 0, 0, 0.45) 0,rgba(0, 0, 0, 0.75) 100%) !important;
-	box-shadow: inset 0 0 10px hsl(0,0%,40%) !important;
-	border-radius: 0 30px 30px 0;
-	margin-right: 0 !important;
+
+#vote .crowd-response.selected {
+  box-shadow: inset 0 0 0 rgba(0,0,0,0.0)
 }
-#meh.selected, #meh-rs .title {
-	background: linear-gradient(225deg, hsla(5,80%,50%,.3), hsla(0,80%,40%,.3)) !important;
-	box-shadow: inset 0 0 10px hsl(15,100%,50%) !important;
+
+#woot .bottom, #grab .bottom, #meh .bottom {
+  background: rgba(0,0,0,0);
+}
+
+#woot .bottom {
+  background: transparent !important;
+}
+
+#grab .bottom {
+  background: transparent !important;
+}
+
+#meh .bottom {
+  background: transparent !important;
 }
 #dj-button.is-wait, #dj-button.is-leave, #dj-button.is-quit, #dj-button.is-locked, #dj-button.is-full {
 	opacity: 0.85;
@@ -206,18 +211,13 @@ i.icon.icon-chat-dj {
 #history-button {
 	background: none;
 }
-.header-panel-button.selected {
-	background: linear-gradient(to bottom,rgba(0, 0, 0, 1) 0,rgba(61, 61, 61, 1) 100%);
-}
 #user-rollover {
-	border-radius: 30px 30px 0 0;
-	background: linear-gradient(to bottom,rgba(0, 0, 0, 0.45) 0,rgba(0, 0, 0, 0.75) 100%);
+	background: rgba(0, 0, 0, 0.75);
 	box-shadow: 0 0 10px #000;
 }
 #user-rollover .info {
-	background: linear-gradient(rgba(230,255,0,0.45), rgba(255,179,0,0.45));
+	background: rgba(36,36,36,0.45);
 	box-shadow: 0px -2px 10px -1px #000;
-	border-radius: 50% 50% 0 0 !important;
 }
 .thumb {
 	background: hsla(210,10%,10%,.4);
@@ -324,20 +324,25 @@ i.icon.icon-chat-dj {
 #dj-button.is-leave .left, #dj-button.is-quit .left {
     background: linear-gradient(to bottom,rgba(244, 107, 64, 1),rgba(244, 107, 48, 1) 100%) !important;
 }
-.message.role-bouncer, .emote.role-bouncer {
-    border-left: crimson 2px solid;
+.message.role-bouncer:hover, .emote.role-bouncer:hover {
+    border: crimson 2px solid;
+    transition: all 0.2s;
 }
-.message.role-host, .emote.role-host {
+.message.role-host:hover, .emote.role-host:hover {
     border-left: #3083FF 2px solid;
+    transition: all 0.2s;
 }
-.message.role-cohost, .emote.role-cohost {
+.message.role-cohost:hover, .emote.role-cohost:hover {
     border-left: #3083FF 2px solid;
+    transition: all 0.2s;
 }
-.message.role-dj, .emote.role-dj {
+.message.role-dj:hover, .emote.role-dj:hover {
     border-left: #ac76ff 2px solid;
+    transition: all 0.2s;
 }
-.message.role-manager, .emote.role-manager {
+.message.role-manager:hover, .emote.role-manager:hover {
     border-left: #FF3030 2px solid;
+    transition: all 0.2s;
 }
 #user-rollover.role-host .role span {
     color:#3083FF !important;
@@ -383,4 +388,7 @@ i.icon.icon-chat-dj {
 }
 .role-dj .name {
     color:#ac76ff !important;
+}
+#friends-button .request-count {
+    background: #0075C8 !important;
 }
