@@ -62,9 +62,6 @@ i.icon.icon-chat-dj {
 #user-rollover .info .level .label {
 	color:#EFEFEF;
 }
-#user-rollover.is-staff .info .role span {
-	color: #0EB006;
-}
 #vote {
 	box-shadow: 0 0 10px #000;
 	border-radius: 40px;
@@ -127,7 +124,18 @@ i.icon.icon-chat-dj {
         background: linear-gradient(to bottom,rgba(0, 0, 0, 0.45) 0,rgba(0, 0, 0, 0.75) 100%) !important;
     box-shadow: inset 0 0 10px hsl(0,0%,40%) !important;
 }
-
+#woot.selected, #woot-rs .title {
+	background: linear-gradient(135deg, hsla(90,80%,50%,.3), hsla(90,80%,30%,.3)) !important;
+	box-shadow: inset 0 0 10px hsl(70,100%,40%) !important;
+}
+#grab.selected, #grab-rs .title {
+	background: linear-gradient(hsla(270,70%,50%,.3), hsla(265,70%,30%,.3)) !important;
+	box-shadow: inset 0 0 10px hsl(280,100%,40%) !important;
+}
+#meh.selected, #meh-rs .title {
+	background: linear-gradient(225deg, hsla(5,80%,50%,.3), hsla(0,80%,40%,.3)) !important;
+	box-shadow: inset 0 0 10px hsl(15,100%,50%) !important;
+}
 #mem .bottom, #meh.crowd-response.disabled.active .bottom {
   border-radius: 0 0 5px 0 !important;
 }
@@ -179,14 +187,6 @@ i.icon.icon-chat-dj {
 }
 .torch {
 	visibility: hidden;
-}
-.is-staff .name {
-	color: #00FFF7;
-    font-weight: normal;
-}
-#chat .from.staff .un {
-	color: #00FFF7;
-    font-weight: normal;
 }
 .user-content.profile .meta.is-staff .role span {
 	color: #00FFF7;
@@ -316,7 +316,7 @@ i.icon.icon-chat-dj {
 	background: none;
 }
 #chat-input {
-	border-radius: 30px 0 0 30px !important;
+    background: rgba(40, 44, 53, 0.50);
 }
 #app-menu, #app-menu .list {
     background: linear-gradient(to bottom,rgba(0, 0, 0, 0.9) 0,rgba(0, 0, 0, 0.9) 100%) !important; 
@@ -324,25 +324,20 @@ i.icon.icon-chat-dj {
 #dj-button.is-leave .left, #dj-button.is-quit .left {
     background: linear-gradient(to bottom,rgba(244, 107, 64, 1),rgba(244, 107, 48, 1) 100%) !important;
 }
-.message.role-bouncer:hover, .emote.role-bouncer:hover {
-    border: crimson 2px solid;
-    transition: all 0.2s;
+.message.role-bouncer, .emote.role-bouncer {
+    border-left: crimson 2px solid;
 }
-.message.role-host:hover, .emote.role-host:hover {
+.message.role-host, .emote.role-host {
     border-left: #3083FF 2px solid;
-    transition: all 0.2s;
 }
-.message.role-cohost:hover, .emote.role-cohost:hover {
+.message.role-cohost, .emote.role-cohost {
     border-left: #3083FF 2px solid;
-    transition: all 0.2s;
 }
-.message.role-dj:hover, .emote.role-dj:hover {
+.message.role-dj, .emote.role-dj {
     border-left: #ac76ff 2px solid;
-    transition: all 0.2s;
 }
-.message.role-manager:hover, .emote.role-manager:hover {
+.message.role-manager, .emote.role-manager {
     border-left: #FF3030 2px solid;
-    transition: all 0.2s;
 }
 #user-rollover.role-host .role span {
     color:#3083FF !important;
@@ -391,4 +386,10 @@ i.icon.icon-chat-dj {
 }
 #friends-button .request-count {
     background: #0075C8 !important;
+}
+#footer-user .buttons .button:hover {
+   background: rgba(50, 55, 66, 0.1) !important;
+}
+#footer-user .buttons .button.store:hover {
+   background: linear-gradient(to bottom,#00b5e6 0,#009cdd 10%);
 }
